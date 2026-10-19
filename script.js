@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Небольшая задержка для каскадного эффекта
                 setTimeout(() => {
                     entry.target.classList.add('visible');
                 }, index * 80);
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     reveals.forEach(el => observer.observe(el));
 
-    // ===== Лёгкий параллакс фоновых пятен при движении мыши =====
+    // ===== Параллакс фоновых пятен =====
     const glows = document.querySelectorAll('.bg-glow');
     let mouseX = 0, mouseY = 0;
 
@@ -33,13 +32,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== Плавный скролл к контактам по клику (опционально) =====
-    // Можно раскомментировать, если добавите якорные ссылки
-    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    //     anchor.addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         const target = document.querySelector(this.getAttribute('href'));
-    //         if (target) target.scrollIntoView({ behavior: 'smooth' });
-    //     });
-    // });
+    // ===== Проверка загрузки аватарки =====
+    const avatarImg = document.querySelector('.avatar img');
+    const avatar = document.querySelector('.avatar');
+
+    if (avatarImg) {
+        // Если картинка уже не загрузилась до DOMContentLoaded
+        if (avatarImg.complete && avatarImg.naturalWidth === 0) {
+            avatar.classList.add('no-img');
+        }
+
+        // Если ошибка случится позже
+        avatarImg.addEventListener('error', () => {
+            avatar.classList.add('no-img');
+            avatarImg.style.display = 'none';
+        });
+
+        // Если картинка успешно загрузилась — убираем fallback
+        avatarImg.addEventListener('load', () => {
+            avatar.classList.remove('no-img');
+        });
+    }
 });
