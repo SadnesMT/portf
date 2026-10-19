@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бутько Глеб — Backend Developer (C++)</title>
+    <title>Толяронок Дмитрий — Backend Developer (C++)</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,13 +19,17 @@
 
     <main class="container">
 
-        <!-- Шапка -->
+        <!-- ===== ШАПКА ===== -->
         <header class="header reveal">
+
+            <!-- АВАТАРКА: замените avatar.jpg на имя своего файла -->
             <div class="avatar">
-                <span>БГ</span>
+                <img src="avatar.jpg" alt="Толяронок Дмитрий" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                <span class="avatar-fallback">ДТ</span>
             </div>
+
             <div class="header-info">
-                <h1>Бутько Глеб</h1>
+                <h1>Толяронок Дмитрий</h1>
                 <p class="subtitle">Backend Developer <span class="accent">C++</span></p>
                 <p class="location">
                     <i class="fa-solid fa-location-dot"></i> Новополоцк
@@ -33,16 +37,16 @@
                     <span class="dot">·</span> офис / удалёнка / гибрид
                 </p>
                 <div class="contacts">
-                    <a href="tel:+375295702111"><i class="fa-solid fa-phone"></i><span>+375 29 570-21-11</span></a>
-                    <a href="mailto:glebutkooo@gmail.com"><i class="fa-solid fa-envelope"></i><span>glebbutkooo@gmail.com</span></a>
-                    <a href="https://t.me/Sadn3ssMyT" target="_blank"><i class="fa-brands fa-telegram"></i><span>@Sadn3ssMyT</span></a>
-                    <a href="https://gist.github.com/SadnesMT" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+                    <a href="tel:+375292255912"><i class="fa-solid fa-phone"></i><span>+375 29 225-59-12</span></a>
+                    <a href="mailto:sovetovd@internet.ru"><i class="fa-solid fa-envelope"></i><span>sovetovd@internet.ru</span></a>
+                    <a href="https://t.me/Akke1a" target="_blank"><i class="fa-brands fa-telegram"></i><span>@Akke1a</span></a>
+                    <a href="https://github.com/Neakkella" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
                 </div>
             </div>
         </header>
 
-        <!-- О себе -->
+        <!-- ===== О СЕБЕ ===== -->
         <section class="section reveal">
             <h2><span class="num">01</span> О себе</h2>
             <p class="text">
@@ -57,7 +61,7 @@
             </p>
         </section>
 
-        <!-- Навыки -->
+        <!-- ===== НАВЫКИ ===== -->
         <section class="section reveal">
             <h2><span class="num">02</span> Навыки</h2>
 
@@ -106,21 +110,23 @@
             </div>
         </section>
 
-        <!-- Проекты -->
+        <!-- ===== ПРОЕКТЫ ===== -->
         <section class="section reveal">
             <h2><span class="num">03</span> Проекты</h2>
 
             <div class="project-card">
                 <div class="project-head">
-                    <h3>«Замещение вакансий»</h3>
+                    <h3>«Учёт автомобилей»</h3>
                     <span class="tag">C++ · связный список</span>
                 </div>
                 <p>
-                    Консольное приложение для замещения вакансий с добавлением, редактированием,
+                    Консольное приложение для учёта автомобилей с добавлением, редактированием,
                     удалением, поиском, сортировкой, фильтрацией и сохранением данных между запусками.
+                    Отдельное индивидуальное задание — модуль «техосмотр».
                 </p>
                 <p class="project-label">Что сделано лично:</p>
                 <ul>
+                    <li>Структуры <code>Car</code>, <code>FullName</code>, <code>Address</code> и двусвязный список</li>
                     <li>CRUD-операции: добавление в начало/конец/по индексу, удаление, редактирование, перестановка</li>
                     <li>Сортировка выбором по нескольким полям, линейный и бинарный поиск, поиск по префиксу/подстроке, фильтрация</li>
                     <li>Сохранение/загрузка в бинарном и текстовом форматах</li>
@@ -146,7 +152,7 @@
             </div>
         </section>
 
-        <!-- Образование -->
+        <!-- ===== ОБРАЗОВАНИЕ ===== -->
         <section class="section reveal">
             <h2><span class="num">04</span> Образование</h2>
             <div class="education-card">
@@ -162,8 +168,9 @@
             </div>
         </section>
 
+        <!-- ===== ПОДВАЛ ===== -->
         <footer class="footer reveal">
-            <p>© 2026 Бутько Глеб · Сделано с ❤️ и C++</p>
+            <p>© 2026 Толяронок Дмитрий · Сделано с ❤️ и C++</p>
         </footer>
 
     </main>
