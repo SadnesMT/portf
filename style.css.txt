@@ -1,0 +1,261 @@
+/* ===== Базовые настройки ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0f172a;          /* тёмный фон */
+    --card-bg: #1e293b;     /* фон карточек */
+    --text: #e2e8f0;        /* основной текст */
+    --muted: #94a3b8;       /* приглушённый текст */
+    --accent: #38bdf8;      /* акцентный цвет (голубой) */
+    --accent-hover: #0ea5e9;
+    --border: #334155;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== Шапка ===== */
+.header {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #8b5cf6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+}
+
+.header-info {
+    flex: 1;
+    min-width: 260px;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.subtitle {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.location {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.separator {
+    margin: 0 8px;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.contacts a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: color 0.2s;
+}
+
+.contacts a:hover {
+    color: var(--accent);
+}
+
+.contacts i {
+    color: var(--accent);
+}
+
+/* ===== Секции ===== */
+.section {
+    background: var(--card-bg);
+    padding: 30px 35px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section h2 i {
+    color: var(--accent);
+}
+
+/* ===== Навыки ===== */
+.skill-group {
+    margin-bottom: 20px;
+}
+
+.skill-group h3 {
+    font-size: 1.05rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.skill-group ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-group li {
+    padding-left: 22px;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.skill-group li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* ===== Проекты ===== */
+.project-card {
+    background: rgba(56, 189, 248, 0.05);
+    border-left: 4px solid var(--accent);
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+.project-label {
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 12px;
+}
+
+.project-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-card li {
+    padding-left: 22px;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.project-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* ===== Образование ===== */
+.education-card h3 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.edu-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.education-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.education-card li {
+    padding-left: 22px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.education-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* ===== Подвал ===== */
+.footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 20px 0;
+}
+
+/* ===== Адаптивность ===== */
+@media (max-width: 600px) {
+    body { padding: 20px 12px; }
+    .header { padding: 25px 20px; text-align: center; justify-content: center; }
+    .header-info { text-align: center; }
+    .contacts { justify-content: center; }
+    .section { padding: 22px 20px; }
+    .header h1 { font-size: 1.5rem; }
+}
